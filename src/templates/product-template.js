@@ -8,7 +8,7 @@ const ComponentName = ({
     product: {
       price,
       title,
-      image: { fixed },
+      productImage: { fixed },
       info: { info },
     },
   },
@@ -39,7 +39,7 @@ export const query = graphql`
     product: contentfulProduct(slug: { eq: $slug }) {
       title
       price
-      image {
+      productImage {
         fixed(width: 300) {
           ...GatsbyContentfulFixed
         }
